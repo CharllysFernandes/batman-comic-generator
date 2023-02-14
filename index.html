@@ -23,41 +23,68 @@
   <link rel="stylesheet" href="./src/home.css">
   <link rel="stylesheet" href="./src/reset-style-sheet.css">
   <link rel="stylesheet" href="./src/style.css" />
+
+  <!-- Bootstrap  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+
+  <style>
+    div {
+      /* font-family: 'Courier New', Courier, monospac; */
+      font-family: Comic Neue;
+
+    }
+
+    .robin {
+      /* position: relative; */
+      top: 65px;
+      left: 52px;
+    }
+
+    .batman {
+      top: 74px;
+      right: -127px;
+
+    }
+  </style>
+
 </head>
 
 <body>
-  <div>
-    <div class="home-container">
-      <div class="home-container-header">
-        <h1 class="home-text">Batman Slapping Robin Meme Generator</h1>
-        <span class="home-text1">
-          Build your own custom Batman and Robin comic with this easy-to-use
-          image generator!
-        </span>
-        <div class="home-container1">
-          <img alt="Batman and Robin" src="public/playground_assets/batman_and_robin-1500h.jpeg" loading="eager"
-            class="home-image" />
-            <!-- Robin -->
-          <div class="home-container-batman-ballon">
-            <textarea class="home-text-ballon-robin" align="center" name="robin" id="robin" cols="30"
-              rows="10">Text here...</textarea>
-          </div>
-          <!-- Batman -->
-          <div class="home-container-robin-ballon">
-            <textarea class="home-text-ballon-robin" name="batman " id="batman" cols="30"
-              rows="10">Text here...</textarea>
-          </div>
-          <!-- form -->
-          <form action="" method="post">
-            <div class="home-container-button batman-input">
-              <span class="home-label-robin">Robin:</span>
-              <input type="text" id="robin" name="robin" maxlength="40" placeholder="Text here ..."
-                class="home-inputrobin input" />
-              <span class="home-label-robin1">Batman:</span>
-              <input type="text" id="batman" name="batman" placeholder="Text here ..." class="home-inputbatman input" />
-              <button class="home-button button" type="submit">Create Comic</button>
+  <main class="container">
+    <h1 class="mt-3 fs-1 fw-bold text-black text-center">Batman Slapping Robin Meme Generator</h1>
+    <p class="fs-3 fw-medium text-dark-emphasis text-center">
+      Build your own custom Batman and Robin comic with this easy-to-use
+      image generator!
+    </p>
+    <div class="row">
+      <div class="col-12 col-lg-6 bg-dark-subtle w-auto">
+        <span class="position-relative text-black fs-5 fw-bolder robin" id="ballonRobin">I'm a web developer</span>
+        <span class="position-relative text-black fs-5 fw-bold batman" id="ballonBatman">You don't know
+          javascript!</span>
+        <img class="imageSlap" alt="Batman and Robin" src="public/playground_assets/batman_and_robin-1500h.jpeg" />
+
+      </div>
+      <div class="col-lg-6 bg-secondary-subtle w-auto input-group w-100">
+        <div class="form-floating d-inline-flex gap-4">
+          <div class="d-flex flex-column">
+            <div class="d-flex flex-row">
+              <div>
+                <label for="floatingTextarea1">Batman</label>
+                <textarea class="form-control border-opacity-75 border-1" id="floatingTextarea1"
+                  style="height: 150px"></textarea>
+              </div>
+              <div>
+                <label for="inputRobin">Robin</label>
+                <textarea class="form-control border-opacity-75 border-1" id="inputRobin"
+                  style="height: 150px"></textarea>
+              </div>
             </div>
-            <table class="batman-input" align="center">
+            <table class="mt-4 text-center">
               <tbody>
                 <tr>
                   <td style="text-align: center;"><label>Slap<br /><img width="66" height="64"
@@ -72,13 +99,19 @@
                 </tr>
               </tbody>
             </table>
-          </form>
+            <div class="w-auto text-center">
+              <button class="btn btn-outline-dark">Create comic</button>
 
+            </div>
+
+
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
+  </main>
+  <script src="./script.js"></script>
 </body>
 
 </html>
